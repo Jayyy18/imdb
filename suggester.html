@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Suggester - MovieDB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="suggester.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MovieDB</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="top-movies.html">Top Movies</a></li>
+            <li><a href="top-actors.html">Top Actors</a></li>
+            <li><a href="suggester.html" class="active">Movie Suggester</a></li>
+            <li><a href="watchlist.html">My Watchlist</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="suggester-section">
+            <h2>Movie Suggester</h2>
+            <div class="preferences-form">
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <select id="genre">
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year Range</label>
+                    <select id="year">
+                        <option value="2020,2024">2020-2024</option>
+                        <option value="2015,2019">2015-2019</option>
+                        <option value="2010,2014">2010-2014</option>
+                        <option value="2000,2009">2000-2009</option>
+                        <option value="1990,1999">1990-1999</option>
+                    </select>
+                </div>
+                <button id="suggestBtn" class="suggest-btn">Get Suggestions</button>
+            </div>
+            <div class="movie-grid" id="suggestionsGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieDB. Powered by OMDB API</p>
+    </footer>
+
+    <script src="suggester.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+.movie-details-container {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.movie-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.movie-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info-detailed {
+  color: var(--text-light);
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-gray);
+}
+
+.rating-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.stars i {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.stars i.active {
+  color: #ffd700;
+}
+
+.watchlist-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.watchlist-btn:hover {
+  background-color: #1ab368;
+}
+
+.plot {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cast-crew {
+  margin-bottom: 2rem;
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cast-member {
+  text-align: center;
+}
+
+.cast-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.similar-movies {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .movie-content {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-poster {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+

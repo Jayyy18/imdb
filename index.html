@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDB - Your Movie Database</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MovieDB</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="top-movies.html">Top Movies</a></li>
+            <li><a href="top-actors.html">Top Actors</a></li>
+            <li><a href="suggester.html">Movie Suggester</a></li>
+            <li><a href="watchlist.html">My Watchlist</a></li>
+            <li><a href="mood-recommender.html">Mood Recommender</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to MovieDB</h1>
+            <p>Your ultimate movie database</p>
+        </section>
+
+        <section class="popular-section">
+            <h2>POPULAR</h2>
+            <div class="movie-grid" id="movieGrid">
+                <!-- Movies will be populated here -->
+            </div>
+        </section>
+
+        <section class="genre-section" id="actionSection">
+            <h2>Action Movies</h2>
+            <div class="movie-grid" id="actionGrid"></div>
+        </section>
+
+        <section class="genre-section" id="comedySection">
+            <h2>Comedy Movies</h2>
+            <div class="movie-grid" id="comedyGrid"></div>
+        </section>
+
+        <section class="genre-section" id="dramaSection">
+            <h2>Drama Movies</h2>
+            <div class="movie-grid" id="dramaGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieDB. Powered by OMDB API</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+

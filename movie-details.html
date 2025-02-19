@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - MovieDB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">MovieDB</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="top-movies.html">Top Movies</a></li>
+            <li><a href="top-actors.html">Top Actors</a></li>
+            <li><a href="suggester.html">Movie Suggester</a></li>
+            <li><a href="watchlist.html">My Watchlist</a></li>
+            <li><a href="mood-recommender.html">Mood Recommender</a></li>
+        </ul>
+    </nav>
+
+    <main class="movie-details-container">
+        <div class="movie-backdrop"></div>
+        <div class="movie-content">
+            <div class="movie-poster">
+                <!-- Poster will be inserted here -->
+            </div>
+            <div class="movie-info-detailed">
+                <h1 class="movie-title"></h1>
+                <div class="movie-meta">
+                    <span class="release-date"></span>
+                    <span class="runtime"></span>
+                    <span class="genre"></span>
+                </div>
+                <div class="rating-container">
+                    <div class="user-rating">
+                        <h3>Your Rating</h3>
+                        <div class="stars">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <div class="imdb-rating">
+                        <h3>IMDb Rating</h3>
+                        <div class="rating-value"></div>
+                    </div>
+                </div>
+                <button class="watchlist-btn">
+                    <i class="fas fa-plus"></i> Add to Watchlist
+                </button>
+                <div class="plot"></div>
+                <div class="cast-crew">
+                    <h3>Cast & Crew</h3>
+                    <div class="cast-list"></div>
+                </div>
+            </div>
+        </div>
+        <section class="similar-movies">
+            <h2>Similar Movies</h2>
+            <div class="movie-grid" id="similarMoviesGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieDB. Powered by OMDB API</p>
+    </footer>
+
+    <script src="movie-details.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+
